@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 
-class ImagesWidget extends StatelessWidget {
-  const ImagesWidget({super.key});
+class WelcomeLogo extends StatelessWidget {
+  const WelcomeLogo({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      'images/logo.png',
+    return Container(
       width: 200,
       height: 200,
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.white,
+      ),
+      child: ClipOval(
+        child: Image.asset(
+          "images/satu.jpg",
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }
